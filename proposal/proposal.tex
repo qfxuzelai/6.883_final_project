@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\usepackage{geometry}
+\geometry{left=1in,right=1in,top=1in,bottom=1in}
+
+\title{\textbf{Music Sound Separation by Machine Learning}\\ --- 6.883 Final Project Proposal}
+\author{Zelai Xu (\href{mailto:zelai@mit.edu}{zelai@mit.edu})}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\subsection{Probelm Definition}
+This project aims to solve the music sound separation problem, where we are given the mixed sound of several different instruments and are asked to extract the separated sound of each instrument. One possible scenario where this problem may arise is when we have a duet music but want to hear the sound of only one instrument, then we can use machine learning to model and solve this problem.
+
+\subsection{Data Description}
+Our input data is a mixed audio sequence $S(t)$, and the classes of instrument to separate, denoted by $C_1,\cdots,C_k$. For example, we may be given a duet of piano and violin, and are told that the target instrument class is 'piano' and 'voilin'. The expected output is the separated audio sequences of the target instruments, which is $S_1(t),\cdots,S_k(t)$. In the previous example, the output should be the separated sound of piano and violin.
+
+\section{Proposed Work}
+
+\subsection{Approaches}
+We currently come up with two possible appoaches to solve this problem. One is to use classic signal processing methods like ICA, NMF, etc. and K-Mean algorithm to separate and cluster different sounds. The other is to utilize deep neural network like U-Net to separate the sound of different instrument.
+
+\subsection{Evaluations}
+To evaluate the performance of suggested methods, we will use the standard metrics like SDR, SIR, SAR, etc. In addition, we will also subjectively evaluate the performance of suggested methods.
+
+\subsection{Challenges}
+The challenge for the first method is how to properly model this problem as machine learning problem like clustering. The challenge for the second method is how to design the architeture of the neural network to perform the separation task. And the challenge for both methods is how to get the trainning data, since we usually don't have access to the separate sound of mixed music.
+
+\section{Members}
+Zelai Xu, undergraduate in Course 6, plan to complete the work individually.
+
+\end{document}
